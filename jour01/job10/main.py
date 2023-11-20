@@ -1,15 +1,26 @@
-investissement = 10000
+# J'ai choisi 100 comme capital de départ et un taux de 3% par an
+capital = 100
 taux = 3/100
 
-rendement = investissement*taux
-print (f"En temps 1, le rendement annuel est de {rendement}")
+interets = capital * taux
+print (f"En temps 1, l'interêt annuel est de {interets}")
 
-investissement = investissement + rendement + 5000
-taux = taux + 2/100 *taux
-rendement = investissement * taux
-print (f"En temps 2, le nouveau rendement annuel est de {rendement}")
+# Au capital initial s'ajoutent les intérêts et 5000 pour l'année suivante
+capital = capital + interets + 5000
 
-investissement = investissement - 10/100
-taux = taux - 1/100
-rendement = investissement *taux
-print (f"En temps 3, Le nouveau rendement annuel est de {rendement}")
+# On applique à ce nouveau un taux initial majoré de 2%
+taux = taux + taux*2/100
+
+interets = capital * taux
+print (f"En temps 2, l'interêt annuel est de {interets}")
+
+# On retire 10% du capital précédemment calculé et l'ancien taux est minoré de 1%
+capital = capital - 10/100
+taux = taux - taux*1/100
+
+interets = capital * taux
+
+# Le capital final 
+capital = capital + interets
+
+print (f"En temps 3, le capital final est {capital} et l'interêt annuel est de {interets}")

@@ -1,4 +1,4 @@
-# Afficher l'alphabet fois 
+# Afficher l'alphabet fois 10
 list = "abcdefghijklmnopqrstuvwxyz"*10
 
 # Pour afficher sous forme de pyramide
